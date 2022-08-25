@@ -2,26 +2,26 @@ function createTitle(title) {
 return `The ${title}`
 }
 
-function buildMainCharacter(name,age,pronouns) {
+function buildMainCharacter(name , age, pronouns) {
 return {
-  name:name,
-  age:age,
-  pronouns:pronouns
+  name: name,
+  age: age,
+  pronouns: pronouns
   };
 }
-function saveReview(statement,listOfReviews){
-// for(var i = 0;i < listOfReviews.length; i++) {
-//   if(listOfReviews[i] === statement){
-listOfReviews.push(statement);
-return listOfReviews
+function saveReview(statement, listOfReviews){
+  if(listOfReviews.includes(statement) === false ){
+    listOfReviews.push(statement)
+  };
+  return listOfReviews
 };
+
 
 module.exports = {
   createTitle,
    buildMainCharacter,
-
-  saveReview,
+   saveReview,
   // calculatePageCount,
   // writeBook,
   // editBook
-}
+};
