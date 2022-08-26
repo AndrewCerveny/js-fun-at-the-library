@@ -1,10 +1,16 @@
-function shelfBook(bookObj,contentsOnShelves){
-if(contentsOnShelves.length < 3) {
-  contentsOnShelves.unshift(bookObj);
-  console.log("taking first book",contentsOnShelves)
-return
-  };
+function shelfBook(bookObj,booksOnShelf){
+  booksOnShelf.splice(0,1,bookObj)
+  console.log("step1",booksOnShelf)
+  booksOnShelf.push(bookObj)
+  console.log("Step 2 added obj to front",booksOnShelf)
+  return console.log(booksOnShelf[1])
 };
+// order is (DUNE, Hyperion,Dune)here****
+
+
+
+
+
 
 
 module.exports = {

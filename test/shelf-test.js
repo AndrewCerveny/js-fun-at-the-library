@@ -35,7 +35,7 @@ describe("shelf.js", function() {
       assert.equal(sciFiShelf[1], hyperion);
     });
 
-    it("should add another book to the shelf", function() {
+    it.only("should add another book to the shelf", function() {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -64,7 +64,7 @@ describe("shelf.js", function() {
       assert.equal(sciFiShelf[2], hyperion);
     });
 
-    it("shelves can only hold a certain amount of books", function () {
+    it.skip("shelves can only hold a certain amount of books", function () {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
