@@ -108,7 +108,7 @@ describe("shelf.js", function() {
       assert.isFunction(unshelfBook);
     });
 
-    it.only("should remove a book by name", function() {
+    it("should remove a book by name", function() {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -172,7 +172,7 @@ describe("shelf.js", function() {
       assert.isFunction(listTitles);
     });
 
-    it ("should create a list of all the titles on a shelf", function () {
+    it("should create a list of all the titles on a shelf", function () {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
