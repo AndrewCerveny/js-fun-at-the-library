@@ -1,11 +1,33 @@
-function shelfBook(bookObj,booksOnShelf){
-  booksOnShelf.splice(0,1,bookObj)
-  console.log("step1",booksOnShelf)
-  booksOnShelf.push(bookObj)
-  console.log("Step 2 added obj to front",booksOnShelf)
-  return console.log(booksOnShelf[1])
+
+function shelfBook(bookObj,sciFiShelf) {
+  if(sciFiShelf.length < 3) {
+  sciFiShelf.unshift(bookObj);
+  console.log(sciFiShelf);
+for(var i = 0; i < sciFiShelf.length; i++)
+console.log(i,sciFiShelf[i])
+  }
+return
 };
-// order is (DUNE, Hyperion,Dune)here****
+
+function unshelfBook(sciFiShelf){
+  console.log(sciFiShelf)
+};
+// trying to figure out how to access the array
+// try to unshelf object dune from name argument "dune"
+//return an arr with 2 elements left on shelf 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15,7 +37,7 @@ function shelfBook(bookObj,booksOnShelf){
 
 module.exports = {
   shelfBook,
-  // unshelfBook,
+   unshelfBook,
   // listTitles,
   // searchShelf
 };
