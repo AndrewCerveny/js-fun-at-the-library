@@ -79,7 +79,7 @@ describe("library.js", function() {
   });
 
   describe("checkoutBook", function() {
-    it("should unshelf a book to check out a book to a patron", function() {
+    it.only("should unshelf a book to check out a book to a patron", function() {
       var dracula = {
         title: "Dracula",
         mainCharacter: { name: "Count Dracula", age: undefined, pronouns: "he/him" },
@@ -99,6 +99,15 @@ describe("library.js", function() {
         genre: "fiction"
       }
       var denverLibrary = createLibrary("Denver Public Library");
+// {
+  // name: "Denver Public Library",
+  //  shelves: {
+  //   fantasy: [dracula],
+  //   fiction: [P&P],
+  //   nonFiction: [B&C],
+  // }
+  // };
+
 
       addBook(denverLibrary, dracula);
       addBook(denverLibrary, bornACrime);
