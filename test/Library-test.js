@@ -12,7 +12,7 @@ describe("library.js", function() {
       assert.isFunction(createLibrary);
     });
 
-    it.only("should have a name", function() {
+    it("should have a name", function() {
       var denverLibrary = createLibrary("Denver Public Library");
 
     assert.equal(denverLibrary.name, "Denver Public Library");
@@ -30,7 +30,7 @@ describe("library.js", function() {
       assert.isObject(denverLibrary.shelves);
     });
 
-    it.only("should have several different types of shelves", function() {
+    it("should have several different types of shelves", function() {
       var denverLibrary = createLibrary("Denver Public Library");
 
       assert.deepEqual(denverLibrary.shelves.fantasy, []);
@@ -40,7 +40,7 @@ describe("library.js", function() {
   });
 
   describe("addBook", function() {
-    it.only("should add book to the fantasy shelf", function() {
+    it("should add book to the fantasy shelf", function() {
       var denverLibrary = createLibrary("Denver Public Library");
       var dracula = {
         title: "Dracula",
@@ -54,7 +54,7 @@ describe("library.js", function() {
       assert.equal(denverLibrary.shelves.fantasy[0], dracula);
     });
 
-    it.only("should add books to the correct shelves automatically", function() {
+    it("should add books to the correct shelves automatically", function() {
       var denverLibrary = createLibrary("Denver Public Library");
       var dracula = {
         title: "Dracula",
@@ -79,7 +79,7 @@ describe("library.js", function() {
   });
 
   describe("checkoutBook", function() {
-    it.only("should unshelf a book to check out a book to a patron", function() {
+    it ("should unshelf a book to check out a book to a patron", function() {
       var dracula = {
         title: "Dracula",
         mainCharacter: { name: "Count Dracula", age: undefined, pronouns: "he/him" },
